@@ -1,0 +1,52 @@
+@media screen and (max-width: 252px) {
+    
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&display=swap');
+
+:root{
+    --white: #FFFFFF;
+    --blue:  #1E90FF;
+    --gray: rgb(242, 242, 242);
+    --font-1: 'Open Sans', sans-serif;
+    --font-size-1: 1.5rem;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+header{
+    width: 100%;
+    height: 3.5rem;
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+}
+
+#titulo{
+    font-family: var(--font-1);
+    color: var(--white);
+    font-size: var(--font-size-1);
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+main{
+    width: 100%;
+    height: 40rem;
+    background-color: var(--white);
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+footer{
+    width: 100%;
+    height: 10rem;
+    background-color: var(--gray);
+}
+}
