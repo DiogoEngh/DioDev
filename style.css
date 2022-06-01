@@ -63,12 +63,13 @@ header{
     color: var(--white);
     font-size: var(--font-size-1);
 }
-#button_menu, #button_user{
+#button_menu, #button_night{
   position: relative;
     height: var(--button-size);
     width: var(--button-size);;
-    background-color: var(--blue);
+    background-color: transparent;
     margin: 0.5rem;
+    cursor: pointer;
 }
 #button_menu{
   z-index: 500;
@@ -93,9 +94,9 @@ header{
   bottom: 0.4rem;
 }
   
-#button_user{
+#button_night{
   border: 0.15rem solid var(--white);
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
 
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
