@@ -1,117 +1,34 @@
-@media screen and (max-width: 450px) {
-    
+const button_menu = document.getElementById("button_menu")
+const menu_lateral = document.getElementById("menu_lateral")
+const headerInicio = document.getElementById("header_inicio")
+const mainInicio = document.getElementById("main_inicio")
+const footerInicio = document.getElementById("footer_inicio")
+var menu_active = false
+const line_1 = document.getElementById("line_1")
+const line_2 = document.getElementById("line_2")
+const line_3 = document.getElementById("line_3")
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&display=swap');
-
-:root{
-    --white: #FFFFFF;
-    --blue:  #1E90FF;
-    --gray: rgb(242, 242, 242);
-    --font-1: 'Open Sans', sans-serif;
-    --font-size-1: 1.5rem;
-    --button-size: 2.5rem;
-}
-/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
-
-#menu_lateral{
-    position: absolute;
-    top: 0rem;
-    width: 0;
-    background-color: var(--blue);
-    right: 0;
-    height: 66.5rem;
-    transition: 0.3s all linear;
-}
-
-
-/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
-
-header{
-    width: 100%;
-    height: 3.5rem;
-    background-color: var(--blue);
-    display: flex;
-    align-items: center;
-}
-#slot_titulo{
-    position: absolute;
-    left: 0;
-    height: 3.5rem;
-    width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-#slot_menu{
-    position: absolute;
-    width: 60%;
-    right: 0;
-    height: 3.5rem;
-    display: flex;
-    align-items: center;
-    justify-content:flex-end;
-}
-#titulo{
-    font-family: var(--font-1);
-    color: var(--white);
-    font-size: var(--font-size-1);
-}
-#button_menu, #button_night{
-  position: relative;
-    height: var(--button-size);
-    width: var(--button-size);;
-    background-color: transparent;
-    margin: 0.5rem;
-    cursor: pointer;
-}
-#button_menu{
-  z-index: 500;
-}
-#line_1,#line_2,#line_3{
-  width: 2rem;
-  height: 0.3rem;
-  background-color: white;
-  border-radius: 5px;
-  transition: 0.3s all linear;
-}
-#line_1{
-  position: absolute;
-  top: 0.4rem;
-}
-#line_2{
-  position: absolute;
-  top: 1.1rem;
-}
-#line_3{
-  position: absolute;
-  bottom: 0.4rem;
-}
-  
-#button_night{
-  border: 0.15rem solid var(--white);
-  border-radius: 1rem;
+var menuSide = () => {
+    switch(menu_active){
+      case false:
+        menu_active = true
+        menu_lateral.style.width = "100%"
+        line_1.style.top = "1.15rem"
+        line_1.style.transform = "rotate(45deg)"
+        line_3.style.bottom = "1.15rem"
+        line_3.style.transform = "rotate(-45deg)"
+        line_2.style.backgroundColor = "transparent"
+        break
+      default:
+        menu_active = false
+        menu_lateral.style.width = "0%"
+        line_1.style.top = "0.4rem"
+        line_1.style.transform = "rotate(0deg)"
+        line_3.style.bottom = "0.4rem"
+        line_3.style.transform = "rotate(0deg)"
+        line_2.style.backgroundColor = "white"
+        break
+    }
 }
 
-/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
-
-main{
-    width: 100%;
-    height: 53rem;
-    background-color: var(--white);
-}
-
-/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
-
-footer{
-    width: 100%;
-    height: 10rem;
-    background-color: var(--gray);
-}
-}
+button_menu.addEventListener("click",menuSide)
