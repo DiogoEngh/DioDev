@@ -22,7 +22,7 @@
 	--montserrat: 'Montserrat', sans-serif;
 	--footerHeight: 20rem;
 	--mainHeight: 40rem;
-	--containerHeight: calc(100vh - 50rem + var(--mainHeight) + var(--footerHeight));
+	--containerHeight: calc(120vh - 50rem + var(--mainHeight) + var(--footerHeight));
 }
 
 #container{
@@ -67,8 +67,8 @@
 #divMenu{
 	position: absolute;
 	height: 25rem;
-	width: 50%;
-	left: 25%;
+	width: 70%;
+	left: 15%;
 	top: 8rem;
 	display: none;
 	justify-content: center;
@@ -80,7 +80,7 @@
 
 .menuItems{
 	color: var(--color6);
-	margin: .5rem;
+	margin: 1rem 3rem 1rem 3rem;
 	padding: 1rem;
 	border-radius: .3rem;
 	font-family: var(--nunito);
