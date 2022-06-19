@@ -22,7 +22,13 @@
 	--montserrat: 'Montserrat', sans-serif;
 	--footerHeight: 20rem;
 	--mainHeight: 40rem;
-	--containerHeight: calc(120vh - 50rem + var(--mainHeight) + var(--footerHeight));
+	--headerHeight: 4rem;
+	--space1: .5rem;
+	--space2: 6rem;
+	--space3: 48rem;
+	--space4: calc(var(--footerHeight) + 5rem);
+	--spaceContainer: calc(var(--space1) + var(--space2) + var(--space3) + var(--space4));
+	--containerHeight: var(--spaceContainer);
 }
 
 #container{
@@ -40,7 +46,7 @@
 
 #headerPrincipal{
 	position: absolute;
-	top: .5rem;
+	top: var(--space1);
 	left: 10%;
 	width: 80%;
 	height: 4rem;
@@ -166,7 +172,7 @@
 
 #mainPrincipal{
 	position: absolute;
-	top: 6rem;
+	top: var(--space2);
 	left: 15%;
 	width: 70%;
 	height: var(--mainHeight);
@@ -200,7 +206,7 @@
 
 #footerPrincipal{
 	position: absolute;
-	top: 48rem;
+	top: var(--space3);
 	left: 10%;
 	width: 80%;
 	height: var(--footerHeight);
