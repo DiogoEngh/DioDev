@@ -1,309 +1,125 @@
-@media screen and (max-width: 1038px) {
-    
-  *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      outline: none;
-  }
-  
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-  
-  :root{
-    --gray: rgb(47, 46, 68);
-    --font-1: 'Montserrat', sans-serif;
-    --font-size-1: 1.5rem;
-    --font-size-2: 1.5rem;
-    --button-size: 2.5rem;
-    --dark: #0C0232;
-  }
-  /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
-  
-  #menu_lateral{
-    position: absolute;
-    top: 0rem;
-    width: 0;
-    background-color: var(--gray);
-    right: 0;
-    height: 66.5rem;
-    transition: 0.3s all linear;
-    z-index: 499;
-  }
-  
-  
-  /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
-  
-  header{
-      width: 100%;
-      height: 3.5rem;
-      background-color: transparent;
-      display: flex;
-      align-items: center;
-      transition: 0.3s all linear;
-  }
-  #slot_titulo{
-      position: absolute;
-      left: 0;
-      height: 3.5rem;
-      width: 40%;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-  }
-  #slot_menu{
-      position: absolute;
-      width: 60%;
-      right: 0;
-      height: 3.5rem;
-      display: flex;
-      align-items: center;
-      justify-content:flex-end;
-  }
-  #titulo{
-      font-family: var(--font-1);
-      color: white;
-      font-size: var(--font-size-1);
-      z-index: 498;
-  }
-  #button_menu{
-    position: relative;
-    height: var(--button-size);
-    width: var(--button-size);;
-    background-color: transparent;
-    margin: 0.5rem;
-    cursor: pointer;
-    z-index: 500;
-  }
-  #line_1,#line_2,#line_3{
-    width: 2rem;
-    height: 0.2rem;
-    background-color: white;
-    border-radius: 5px;
-    transition: 0.3s all linear;
-  }
-  #line_1{
-    position: absolute;
-    top: 0.4rem;
-  }
-  #line_2{
-    position: absolute;
-    top: 1.1rem;
-  }
-  #line_3{
-    position: absolute;
-    bottom: 0.4rem;
-  }
-  
-  /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
-  
-  main{
-      width: 100%;
-      height: 53rem;
-      background-color: var(--gray);
-      transition: 0.3s all linear;
-  }
-  #slidePrincipal{
-    position: fixed;
-    width: 100%;
-    height: 15rem;
-    top: 0rem;
-    z-index: 400;
-  }
-  #nome{
-    position: absolute;
-    top: 5rem;
-    left: 1rem;
-    font-size: var(--font-size-2);
-    font-family: var(--font-1);
-    color: white;
-    z-index: 401;
-  }
-  #tech{
-    position: absolute;
-    font-size: 1.5rem;
-    width: 20%;
-    left: 0rem;
-    color: white;
-    font-family: var(--font-1);
-    margin-top: 1rem;
-    opacity: 0;
-    animation: tech 2s forwards;
-  }
-  @keyframes tech{
-    to{
-      left: 40%;
-      opacity: 1;
-    }
-  }
-  #skillsName{
-    position: absolute;
-    color: white;
-    font-family: var(--font-1);
-    top: 3.5rem;
-    left: 1rem;
-  }
-  #skills{
-    position: absolute;
-    top: 15rem;
-    height: 20rem;
-    width: 100%;
-    background-color: var(--dark);
-    z-index: 402;
-  }
-  #Skill1{
-    position: absolute;
-    height: 4rem;
-    width: 100%;
-    margin-top: 5.5rem;
-  }
-  #htmlIcon{
-    position: absolute;
-    margin: 1rem;
-    height: 2rem;
-    width: 2rem;
-  }
-  #htmlName{
-    color: white;
-    font-family: var(--font-1);
-    margin-left: 1.1rem;
-    font-size: .6rem;
-  }
-  #progressoHtml{
-    position: absolute;
-    height: 1.4rem;
-    width: 12rem;
-    background-color: rgb(20, 20, 20);
-    margin-left: 4rem;
-    top: 1.3rem;
-    border: .1rem solid rgb(52, 52, 52);
-    border-radius: 1rem;
-  }
-  #barraProgressoHtml{
-    position: absolute;
-    height: 100%;
-    width: 0;
-    background-color: rgb(54, 103, 238);
-    border-radius: 1rem;
-    animation: html 2s forwards;
-  }
-  @keyframes html{
-    to{
-      width: 85%;
-    }
-  }
-  #porcentagemHtml{
-    position: absolute;
-    font-size: 1rem;
-    top: 0rem;
-    color: white;
-    font-family: var(--font-1);
-    margin-left: 13rem;
-  }
-  #Skill2{
-    position: absolute;
-    height: 4rem;
-    width: 100%;
-    margin-top: 9.5rem;
-  }
-  #cssIcon{
-    position: absolute;
-    margin: 1rem;
-    height: 2rem;
-    width: 2rem;
-  }
-  #cssName{
-    color: white;
-    font-family: var(--font-1);
-    margin-left: 1.4rem;
-    font-size: .6rem;
-  }
-  #progressoCss{
-    position: absolute;
-    height: 1.4rem;
-    width: 12rem;
-    background-color: rgb(20, 20, 20);
-    margin-left: 4rem;
-    top: 1.3rem;
-    border: .1rem solid rgb(52, 52, 52);
-    border-radius: 1rem;
-  }
-  #barraProgressoCss{
-    position: absolute;
-    height: 100%;
-    width: 0;
-    background-color: rgb(54, 103, 238);
-    border-radius: 1rem;
-    animation: css 2s forwards;
-  }
-  @keyframes css{
-    to{
-      width: 90%;
-    }
-  }
-  #porcentagemCss{
-    position: absolute;
-    font-size: 1rem;
-    top: 0rem;
-    color: white;
-    font-family: var(--font-1);
-    margin-left: 13rem;
-  }
-  #Skill3{
-    position: absolute;
-    height: 4rem;
-    width: 100%;
-    margin-top: 13.5rem;
-  }
-  #jsIcon{
-    position: absolute;
-    margin: 1rem;
-    height: 2rem;
-    width: 2rem;
-  }
-  #jsName{
-    color: white;
-    font-family: var(--font-1);
-    margin-left: .5rem;
-    font-size: .6rem;
-  }
-  #progressoJs{
-    position: absolute;
-    height: 1.4rem;
-    width: 12rem;
-    background-color: rgb(20, 20, 20);
-    margin-left: 4rem;
-    top: 1.3rem;
-    border: .1rem solid rgb(52, 52, 52);
-    border-radius: 1rem;
-  }
-  #barraProgressoJs{
-    position: absolute;
-    height: 100%;
-    width: 0;
-    background-color: rgb(54, 103, 238);
-    border-radius: 1rem;
-    animation: css 2s forwards;
-  }
-  @keyframes js{
-    to{
-      width: 90%;
-    }
-  }
-  #porcentagemJs{
-    position: absolute;
-    font-size: 1rem;
-    top: 0rem;
-    color: white;
-    font-family: var(--font-1);
-    margin-left: 13rem;
-  }
-  
-  /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
-  
-  footer{
-      width: 100%;
-      height: 10rem;
-      background-color: var(--gray);
-      transition: 0.3s all linear;
-  }
-  }
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+	--color1: #0d3b66;
+	--color2: #f95738;
+	--color3: #f4d35e;
+	--color4: #fad0ca;
+	--color5: dodgerblue;
+	--color6: #3c3a3a;
+	--glassWhite: rgba(255,255,255,0.3);
+	--nunito: 'Nunito', sans-serif;
+	--montserrat: 'Montserrat', sans-serif;
+	--footerHeight: 20rem;
+	--mainHeight: 40rem;
+	--containerHeight: calc(100vh - 50rem + var(--mainHeight) + var(--footerHeight));
+}
+
+#container{
+	width: 100%;
+	height: var(--containerHeight);
+	background: linear-gradient(#8ecae6, var(--color4), var(--color2));
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+#headerPrincipal{
+	position: absolute;
+	top: .5rem;
+	left: 10%;
+	width: 80%;
+	height: 4rem;
+	border-radius: 1rem;
+	background-color: var(--glassWhite);
+}
+
+#divTitle{
+	position: absolute;
+	height: 100%;
+	width: 40%;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#title{
+	color: var(--color6);
+	font-family: var(--nunito);
+}
+
+#divMenu{
+	position: absolute;
+	height: 100%;
+	width: 60%;
+	left: 40%;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+
+.menuItems{
+	color: var(--color6);
+	margin: .6rem;
+	padding: .5rem;
+	border-radius: .3rem;
+	font-family: var(--nunito);
+	text-decoration: none;
+}
+.menuItems:hover{
+	background-color: var(--glassWhite);
+	filter: blur(0.1px);
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+#mainPrincipal{
+	position: absolute;
+	top: 6rem;
+	left: 15%;
+	width: 70%;
+	height: var(--mainHeight);
+	background-color: var(--glassWhite);
+	border-radius: 1rem;
+}
+
+#optionMenu1{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 15rem;
+}
+#howIsMe{
+	position: absolute;
+	color: var(--color6);
+	font-family: var(--nunito);
+	top: 2rem;
+	left: 3rem;
+}
+#text1{
+	position: absolute;
+	color: var(--color6);
+	font-family: var(--montserrat);
+	top: 5rem;
+	left: 10%;
+	width: 80%;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+#footerPrincipal{
+	position: absolute;
+	top: 48rem;
+	left: 10%;
+	width: 80%;
+	height: var(--footerHeight);
+	background-color: var(--glassWhite);
+	border-radius: 1rem;
+}
