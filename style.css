@@ -121,6 +121,48 @@
 	top: 1.6rem;
 }
 
+@media (min-width: 860px){
+
+#title{
+	font-size: 2rem;
+}
+
+#dropMenu{
+	display: none;
+}
+
+#divMenu{
+	position: absolute;
+	height: 100%;
+	width: 60%;
+	left: 40%;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	flex-direction: row;
+	top: 0;
+	background-color: transparent;
+}
+
+.menuItems{
+	color: var(--color6);
+	margin: .6rem;
+	padding: .5rem;
+	border-radius: .3rem;
+	font-family: var(--nunito);
+	text-decoration: none;
+	margin: .2rem;
+	padding: .5rem 1rem .5rem 1rem;
+}
+
+.menuItems:hover{
+	background-color: var(--glassWhite);
+	filter: blur(0.1px);
+	color: var(--color6);
+}
+
+}
+
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 
 #mainPrincipal{
