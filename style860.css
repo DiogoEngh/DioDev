@@ -1,3 +1,5 @@
+@media(min-height: 860px){
+
 #title{
 	font-size: 2rem;
 }
@@ -34,4 +36,6 @@
 	background-color: var(--glassWhite);
 	filter: blur(0.1px);
 	color: var(--color6);
+}
+
 }
