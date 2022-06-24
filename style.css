@@ -1,215 +1,283 @@
 *{
-	margin: 0;
 	padding: 0;
+	margin: 0;
 	box-sizing: border-box;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Roboto:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 :root{
-	--color1: #0d3b66;
-	--color2: #f95738;
-	--color3: #f4d35e;
-	--color4: #fad0ca;
-	--color5: dodgerblue;
-	--color6: #3c3a3a;
-	--glassWhite: rgba(255,255,255,0.3);
-	--glassBlack: rgba(0,0,0,0.3);
-	--nunito: 'Nunito', sans-serif;
-	--montserrat: 'Montserrat', sans-serif;
-	--footerHeight: 20rem;
-	--mainHeight: 40rem;
-	--headerHeight: 4rem;
-	--space1: .5rem;
-	--space2: 6rem;
-	--space3: 48rem;
-	--space4: calc(var(--footerHeight) + 5rem);
-	--spaceContainer: calc(var(--space1) + var(--space2) + var(--space3) + var(--space4));
-	--containerHeight: var(--spaceContainer);
+	--heightHeader: 4rem;
+	--heightMain: 50rem;
+	--heightFooter: 20rem;
+	--heightContainer: calc(var(--heightMain) + var(--heightFooter));
+	--colorHeader: #000011;
+	--colorAside: #2c2c2c;
+	--colorMain: #1c1c1c;
+	--colorFooter: #414141;
+	--fontFamilyTitle: 'Baloo 2', cursive;
+	--fontFamilyName: 'Roboto', sans-serif;
+	--fontFamilyIntrodution: 'Montserrat', sans-serif;
+	--fontSizeIntrodution: 4rem;
 }
 
 #container{
+	height: var(--heightContainer);
 	width: 100%;
-	height: var(--containerHeight);
-	background: linear-gradient(#8ecae6, var(--color4), var(--color2));
 }
-#blur{
-	width: 100%;
-	height: var(--containerHeight);
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+#inicioHeader{
+	height: var(--heightHeader);
+	background-color: var(--colorHeader);
+}
+
+#headerTitulo{
+	position: absolute;
+	left: 0;
+	height: var(--heightHeader);
+	width: 30%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#titulo{
+	color: white;
+	font-family: var(--fontFamilyTitle);
+	cursor: pointer;
+}
+
+#headerMenu{
+	position: absolute;
+	left: 30%;
+	height: var(--heightHeader);
+	width: 70%;
+	display: flex;
+	align-items: center;
+}
+
+#menu{
+	position: absolute;
+	height: calc(var(--heightHeader) / 2);
+	width: calc(var(--heightHeader) / 2);
+	right: 2rem;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+}
+
+#line1, #line2, #line3{
+	position: absolute;
+	height: .2rem;
+	background-color: white;
+	border-radius: .5rem;
+	transition: all .3s linear;
+}
+#line1{
+	top: .1rem;
+	width: 1.3rem;
+}
+#line2{
+	top: .9rem;
+	width: 2rem;
+}
+#line3{
+	top: 1.7rem;
+	width: 1.3rem;
+}
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+#inicioAside{
+	position: absolute;
+	right: 0rem;
+	top: var(--heightHeader);
+	height: calc(var(--heightMain) + var(--heightFooter));
+	width: 0rem;
+	background-color: var(--colorAside);
 	transition: all .3s linear;
 }
 
-/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 
-#headerPrincipal{
+#inicioMain{
+	height: var(--heightMain);
+	width: 100%;
+	background-color: var(--colorMain);
+}
+
+#myApresentation{
 	position: absolute;
-	top: var(--space1);
-	left: 10%;
-	width: 80%;
-	height: 4rem;
-	border-radius: 1rem;
-	background-color: var(--glassWhite);
+	top: 15rem;
+	left: 5%;
+	height: 20rem;
+	width: 90%;
+	flex-wrap: wrap;
 }
 
-#divTitle{
-	position: absolute;
-	height: 100%;
-	width: 40%;
-	left: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+#name{
+	font-family: var(--fontFamilyName);
+	color: #aaaaaa;
 }
 
-#title{
-	color: var(--color6);
-	font-family: var(--nunito);
-	font-size: 1.2rem;
-}
-
-#divMenu{
-	position: absolute;
-	height: 25rem;
-	width: 70%;
-	left: 15%;
-	top: 8rem;
-	display: none;
-	justify-content: center;
-	flex-direction: column;
-	background-color: rgba(255,255,255,.8);
-	z-index: 401;
-	border-radius: 1rem;
-}
-
-.menuItems{
-	color: var(--color6);
-	margin: 1rem 3rem 1rem 3rem;
-	padding: 1rem;
-	border-radius: .3rem;
-	font-family: var(--nunito);
-	text-decoration: none;
-	text-align: center;
-}
-
-.menuItems:hover{
-	background-color: dodgerblue;
-	filter: blur(0.1px);
+#introdution{
+	font-family: var(--fontFamilyIntrodution);
 	color: white;
+	font-size: var(--fontSizeIntrodution);
 }
 
-#dropMenu{
+#descrition{
+	color: white;
+	font-family: var(--fontFamilyIntrodution);
+}
+
+#linkedInButton{
+	position: absolute;
+	left: 10%;
+	top: 70rem;
+	height: 4rem;
+	width: 25%;
+	border-radius: 2rem;
+	background-color: #0e76a8;
+	cursor: pointer;
+	opacity: 0;
+	animation: buttonsAnimation 1s ease forwards;
+}
+
+#linkedInSvg, #gitHubSvg{
 	position: absolute;
 	height: 2rem;
-	width: 2rem;
 	top: 1rem;
-	right: 1rem;
+	left: 1rem;
+}
+
+#linkedIn, #gitHub{
+	color: white;
+	position: absolute;
+	top: 1.5rem;
+	left: 4rem;
+	font-family: var(--fontFamilyIntrodution);
+}
+
+#gitHubButton{
+	position: absolute;
+	left: 65%;
+	top: 67rem;
+	height: 4rem;
+	width: 25%;
+	border-radius: 2rem;
+	background-color: #24292f;
 	cursor: pointer;
+	opacity: 0;
+	animation: buttonsAnimation 2s ease forwards;
 }
-#line1, #line2, #line3{
-	height: .2rem;
-	width: 2rem;
-	border-radius: .1rem;
-	background-color: white;
+
+@keyframes buttonsAnimation{
+	to{
+		top: 38rem;
+		opacity: 1;
+	}
+}
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+@media (min-width: 810px){
+
+#inicioMain{
+	height: var(--heightMain);
+	background-color: var(--colorMain);
+}
+
+#myApresentation{
 	position: absolute;
-	transition: all .3s ease;
+	top: 15rem;
+	left: 0rem;
+	height: 20rem;
+	width: 35rem;
+	animation: slideApresentation 2s ease forwards;
+	opacity: 0;
 }
-#line1{
-	top: .3rem;
+
+#name{
+	font-family: var(--fontFamilyName);
+	color: #aaaaaa;
 }
-#line2{
+
+#introdution{
+	font-family: var(--fontFamilyIntrodution);
+	color: white;
+	font-size: var(--fontSizeIntrodution);
+}
+
+#descrition{
+	color: white;
+	font-family: var(--fontFamilyIntrodution);
+}
+
+@keyframes slideApresentation{
+	to{
+		left: 10%;
+		opacity: 1;
+	}
+}
+
+#linkedInButton{
+	position: absolute;
+	left: 10rem;
+	top: 45rem;
+	height: 4rem;
+	width: 10rem;
+	border-radius: 2rem;
+	background-color: #0e76a8;
+	cursor: pointer;
+	opacity: 0;
+	animation: buttonsAnimation 1s ease forwards;
+}
+
+#linkedInSvg, #gitHubSvg{
+	position: absolute;
+	height: 2rem;
 	top: 1rem;
-}
-#line3{
-	top: 1.6rem;
+	left: 1rem;
 }
 
-@media (min-width: 860px){
-
-#title{
-	font-size: 2rem;
-}
-
-#dropMenu{
-	display: none;
-}
-
-#divMenu{
+#linkedIn, #gitHub{
+	color: white;
 	position: absolute;
-	height: 100%;
-	width: 60%;
-	left: 40%;
-	display: flex;
-	justify-content: start;
-	align-items: center;
-	flex-direction: row;
-	top: 0;
-	background-color: transparent;
+	top: 1.5rem;
+	left: 4rem;
+	font-family: var(--fontFamilyIntrodution);
 }
 
-.menuItems{
-	color: var(--color6);
-	margin: .6rem;
-	padding: .5rem;
-	border-radius: .3rem;
-	font-family: var(--nunito);
-	text-decoration: none;
-	margin: .2rem;
-	padding: .5rem 1rem .5rem 1rem;
-}
-
-.menuItems:hover{
-	background-color: var(--glassWhite);
-	filter: blur(0.1px);
-	color: var(--color6);
-}
-
-}
-
-/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
-
-#mainPrincipal{
+#gitHubButton{
 	position: absolute;
-	top: var(--space2);
-	left: 15%;
-	width: 70%;
-	height: var(--mainHeight);
-	background-color: var(--glassWhite);
-	border-radius: 1rem;
+	left: 25rem;
+	top: 45rem;
+	height: 4rem;
+	width: 10rem;
+	border-radius: 2rem;
+	background-color: #24292f;
+	cursor: pointer;
+	opacity: 0;
+	animation: buttonsAnimation 2s ease forwards;
 }
 
-#optionMenu1{
-	position: absolute;
-	top: 0;
-	width: 100%;
-	min-height: 15rem;
-}
-#howIsMe{
-	position: absolute;
-	color: var(--color6);
-	font-family: var(--nunito);
-	top: 2rem;
-	left: 3rem;
-}
-#text1{
-	position: absolute;
-	color: var(--color6);
-	font-family: var(--montserrat);
-	top: 5rem;
-	left: 10%;
-	width: 80%;
+@keyframes buttonsAnimation{
+	to{
+		top: 38rem;
+		opacity: 1;
+	}
 }
 
-/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+}
 
-#footerPrincipal{
-	position: absolute;
-	top: var(--space3);
-	left: 10%;
-	width: 80%;
-	height: var(--footerHeight);
-	background-color: var(--glassWhite);
-	border-radius: 1rem;
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+#inicioFooter{
+	height: var(--heightFooter);
+	background-color: var(--colorFooter);
 }
