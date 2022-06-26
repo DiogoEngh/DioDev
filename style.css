@@ -114,10 +114,12 @@
 #myApresentation{
 	position: absolute;
 	top: 15rem;
-	left: 5%;
+	left: 0%;
 	height: 20rem;
 	width: 90%;
 	flex-wrap: wrap;
+	opacity: 0;
+	animation: slideApresentation 2s ease forwards;
 }
 
 #name{
@@ -128,61 +130,91 @@
 #introdution{
 	font-family: var(--fontFamilyIntrodution);
 	color: white;
-	font-size: var(--fontSizeIntrodution);
+	font-size: calc(var(--fontSizeIntrodution) - 2rem);
 }
 
 #descrition{
 	color: white;
 	font-family: var(--fontFamilyIntrodution);
+	text-align: center;
+}
+
+#linksButtons{
+	position: absolute;
+	height: 10rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #linkedInButton{
-	position: absolute;
-	left: 10%;
-	top: 70rem;
 	height: 4rem;
-	width: 25%;
+	width: 10rem;
 	border-radius: 2rem;
 	background-color: #0e76a8;
 	cursor: pointer;
-	opacity: 0;
-	animation: buttonsAnimation 1s ease forwards;
+	margin: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #linkedInSvg, #gitHubSvg{
-	position: absolute;
 	height: 2rem;
 	top: 1rem;
 	left: 1rem;
 }
 
-#linkedIn, #gitHub{
+#linkedIn{
 	color: white;
-	position: absolute;
 	top: 1.5rem;
 	left: 4rem;
 	font-family: var(--fontFamilyIntrodution);
+	margin-top: .3rem;
+	margin-left: .3rem;
+}
+
+#gitHub{
+	color: black;
+	top: 1.5rem;
+	left: 4rem;
+	font-family: var(--fontFamilyIntrodution);
+	margin-top: .3rem;
+	margin-left: .3rem;
 }
 
 #gitHubButton{
-	position: absolute;
-	left: 65%;
-	top: 67rem;
 	height: 4rem;
-	width: 25%;
+	width: 10rem;
 	border-radius: 2rem;
-	background-color: #24292f;
+	background-color: white;
 	cursor: pointer;
-	opacity: 0;
-	animation: buttonsAnimation 2s ease forwards;
+	margin: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-@keyframes buttonsAnimation{
+@keyframes slideApresentation{
 	to{
-		top: 38rem;
+		left: 5%;
 		opacity: 1;
 	}
 }
+
+@media (min-width: 350px){
+#introdution{
+	font-size: calc(var(--fontSizeIntrodution) - 1rem);
+}
+}
+
+@media (min-width: 500px){
+#introdution{
+	font-size: var(--fontSizeIntrodution);
+}
+}
+
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 @media (min-width: 810px){
 
@@ -215,6 +247,7 @@
 #descrition{
 	color: white;
 	font-family: var(--fontFamilyIntrodution);
+	text-align: left;
 }
 
 @keyframes slideApresentation{
@@ -224,52 +257,8 @@
 	}
 }
 
-#linkedInButton{
-	position: absolute;
-	left: 10rem;
-	top: 45rem;
-	height: 4rem;
-	width: 10rem;
-	border-radius: 2rem;
-	background-color: #0e76a8;
-	cursor: pointer;
-	opacity: 0;
-	animation: buttonsAnimation 1s ease forwards;
-}
-
-#linkedInSvg, #gitHubSvg{
-	position: absolute;
-	height: 2rem;
-	top: 1rem;
-	left: 1rem;
-}
-
-#linkedIn, #gitHub{
-	color: white;
-	position: absolute;
-	top: 1.5rem;
-	left: 4rem;
-	font-family: var(--fontFamilyIntrodution);
-}
-
-#gitHubButton{
-	position: absolute;
-	left: 25rem;
-	top: 45rem;
-	height: 4rem;
-	width: 10rem;
-	border-radius: 2rem;
-	background-color: #24292f;
-	cursor: pointer;
-	opacity: 0;
-	animation: buttonsAnimation 2s ease forwards;
-}
-
-@keyframes buttonsAnimation{
-	to{
-		top: 38rem;
-		opacity: 1;
-	}
+#linksButtons{
+	justify-content: flex-start;
 }
 
 }
