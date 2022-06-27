@@ -3,6 +3,9 @@ const lineTop = document.getElementById("line1")
 const lineMidlle = document.getElementById("line2")
 const lineBottom = document.getElementById("line3")
 const inicioAside = document.getElementById("inicioAside")
+const inicioMain = document.getElementById("InicioMain")
+const options = document.getElementById("options")
+
 let interrupt = true
 
 
@@ -16,6 +19,7 @@ button.addEventListener('click',()=>{
 		lineBottom.style.width = "2rem"
 		lineMidlle.style.backgroundColor = "transparent"
 		inicioAside.style.width = "20rem"
+		options.style.width = "20rem"
 		interrupt = false
 	}else{
 		lineTop.style.transform = "rotate(0deg)"
@@ -26,6 +30,7 @@ button.addEventListener('click',()=>{
 		lineBottom.style.width = "1.3rem"
 		lineMidlle.style.backgroundColor = "white"
 		inicioAside.style.width = "0rem"
+		options.style.width = "0rem"
 		interrupt = true
 	}
 })
