@@ -102,6 +102,34 @@
 	transition: all .3s linear;
 }
 
+#options{
+	position: absolute;
+	top: 5rem;
+	height: 30rem;
+	width: 0rem;
+	transition: all .3s linear;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.optionsNames{
+	text-decoration: none;
+	color: white;
+	border-bottom: 2px solid transparent;
+	font-family: var(--fontFamilyIntrodution);
+	font-size: 1.5rem;
+	width: 16rem;
+	text-align: center;
+	padding: .5rem;
+	margin: .5rem;
+	transition: all .1s linear;
+}
+.optionsNames:hover{
+	border-bottom: 2px solid white;
+}
+
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 
@@ -150,7 +178,7 @@
 
 #linkedInButton{
 	height: 4rem;
-	width: 10rem;
+	width: 4rem;
 	border-radius: 2rem;
 	background-color: #0e76a8;
 	cursor: pointer;
@@ -159,6 +187,9 @@
 	align-items: center;
 	justify-content: center;
 }
+#linkedInButton:hover{
+	opacity: .9;
+}
 
 #linkedInSvg, #gitHubSvg{
 	height: 2rem;
@@ -166,27 +197,9 @@
 	left: 1rem;
 }
 
-#linkedIn{
-	color: white;
-	top: 1.5rem;
-	left: 4rem;
-	font-family: var(--fontFamilyIntrodution);
-	margin-top: .3rem;
-	margin-left: .3rem;
-}
-
-#gitHub{
-	color: black;
-	top: 1.5rem;
-	left: 4rem;
-	font-family: var(--fontFamilyIntrodution);
-	margin-top: .3rem;
-	margin-left: .3rem;
-}
-
 #gitHubButton{
 	height: 4rem;
-	width: 10rem;
+	width: 4rem;
 	border-radius: 2rem;
 	background-color: white;
 	cursor: pointer;
@@ -194,6 +207,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+#gitHubButton:hover{
+	opacity: .9;
 }
 
 @keyframes slideApresentation{
