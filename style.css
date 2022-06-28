@@ -10,7 +10,7 @@
 
 :root{
 	--heightHeader: 4rem;
-	--heightMain: 50rem;
+	--heightMain: 100rem;
 	--heightFooter: 20rem;
 	--heightContainer: calc(var(--heightMain) + var(--heightFooter));
 	--colorHeader: #000011;
@@ -218,6 +218,61 @@
 		left: 5%;
 		opacity: 1;
 	}
+}
+
+#mainProjects{
+	position: absolute;
+	top: 50rem;
+	width: 100%;
+	height: 50rem;
+	display: flex;
+	justify-content: center;
+}
+
+#projectName{
+	position: absolute;
+	width: 20rem;
+	margin-top: 3rem;
+	font-size: 2rem;
+	color: white;
+	font-family: var(--fontFamilyTitle);
+	text-align: center;
+}
+
+#boxProjects{
+	position: absolute;
+	margin-top: 8rem;
+	height: 25rem;
+	width: 20rem;
+	display: flex;
+	overflow: hidden;
+	border-radius: .5rem;
+}
+
+#project1{
+	height: 25rem;
+	transition: all 1s linear;
+	width: 20rem;
+	background-color: green;
+}
+
+#project2{
+	height: 25rem;
+	transition: all 1s linear;
+	width: 0rem;
+	background-color: red;
+}
+#project3{
+	height: 25rem;
+	transition: all 1s linear;
+	width: 0rem;
+	background-color: blue;
+}
+#project4{
+	height: 25rem;
+	transition: all 1s linear;
+	width: 0rem;
+	background-color: pink;
 }
 
 @media (min-width: 350px){
